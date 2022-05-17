@@ -78,7 +78,7 @@ fun ViewModelLocator(vararg viewModels: ViewModel): ViewModelLocator {
             defaultArgs: Bundle?
         ): ViewModelProvider.Factory {
             return object : ViewModelProvider.Factory {
-                override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+                override fun <T : ViewModel> create(modelClass: Class<T>): T {
                     return viewModelMap[modelClass] as T
                 }
 
